@@ -58,12 +58,12 @@ const Login = () => {
           <input onChange={handleSetInputEmail} id='email' type='text' placeholder='Email' className='p-2  w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black' required />
           <label htmlFor='Password'>Password:</label>
           <input onChange={handleSetInputPasswords} id='password' type={click ? "password" : "text"} placeholder='Input your password' className={`p-2  border border-gray-300 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
-          <FaEye onClick={handleSetClick} className='relative flex left-70 -top-10 active:border-1 active:border-white active:rounded-full' />
+          <FaEye onClick={handleSetClick} className='relative flex left-75 -top-10 active:border-1 active:border-white active:rounded-full' />
           <div className='flex gap-2'>
             <input type='checkbox'/>
             <p className='text-sm md:text-lg'>Remember Me</p>
           </div>
-          <button type='submit' className='p-2  border border-gray-300 rounded-lg hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black'>Login</button>
+          <button type='submit' className='p-2 bg-black text-gray-300  border border-gray-300 rounded-lg hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black'>Login</button>
 
           <div className='flex justify-between'>
             <p className='text-sm md:text-lg text-center text-gray-300'>Don't have an account?</p>
@@ -74,7 +74,7 @@ const Login = () => {
         {successMessage && (
           <div className="bg-green-500 text-white p-2 rounded">{successMessage}</div>
         )}
-        
+
         {ErrorMessage && (
           <div className="bg-red-500 text-white p-2 rounded">{ErrorMessage}</div>
         )}

@@ -94,33 +94,33 @@ const CreatePass = () => {
         <div className='min-h-screen w-full flex justify-center items-center'>
             <div className='mb-6'>
                 <div className='border rounded-lg p-4 w-90 md:w-150'>
-                    <h1 className='text-3xl md:text-4xl text-center font-bold'>Create an account</h1>
-                    <p className='text-sm md:text-md text-center text-gray-300 mt-0 md:mt-4 mb-4 md:md-0'>Enter your details below to create your account</p>
+                    <h1 className='text-4xl text-center font-bold'>Create an account</h1>
+                    <p className='text-xs md:text-md text-center text-gray-300 mt-0 md:mt-4 mb-4 md:md-0'>Enter your details below to create your account</p>
                     <form onSubmit={handleSubmit} id='form' className='space-y-2 flex flex-col text-lg'>
                         <div className='relative'>
                             <label htmlFor="Name">Name:</label>
-                            <input id='name' type='text' placeholder='Name' className='p-2 m-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black' required />
+                            <input id='name' type='text' placeholder='Name' className='p-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black' required />
                         </div>
 
                         <div className='relative'>
                             <label htmlFor="email" >Email:</label>
-                            <input onChange={handleEmailChange} id='mail' type='email' placeholder='johndoe@email.com' className={`p-2 m-2 border border-gray-300 ${emailError ? 'border-red-500' : email ? 'border-green-500' : 'border-gray-300'} w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
+                            <input onChange={handleEmailChange} id='mail' type='email' placeholder='johndoe@email.com' className={`p-2  border border-gray-300 ${emailError ? 'border-red-500' : email ? 'border-green-500' : 'border-gray-300'} w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
                             {emailError && (<div className='h-5 md:h-10 text-white text-lg border border-2 bg-red-600 rounded-md border-red-500'>{emailError}</div>)}
                         </div>
 
                         <div className='relative'>
                             <label htmlFor="password" >Password:</label>
-                            <input onChange={handlePasswordChange} id='password' type={click ? "password" : "text"} placeholder='Input your password' className={`p-2 m-2 border border-gray-300 ${passwordError ? 'border-red-500' : password ? 'border-green-500' : 'border-gray-300'} w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
-                            <FaEye onClick={handleSetClick} className='relative flex left-75  md:left-130 -top-10 active:border-1 active:border-white active:rounded-full' />
+                            <input onChange={handlePasswordChange} id='password' type={click ? "password" : "text"} placeholder='Input your password' className={`p-2  border border-gray-300 ${passwordError ? 'border-red-500' : password ? 'border-green-500' : 'border-gray-300'} w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
+                            <FaEye onClick={handleSetClick} className='relative flex left-75  md:left-130 -top-8 active:border-1 active:border-white active:rounded-full' />
                         </div>
 
                         <div onChange={handlePasswordConfrimChange} className='relative'>
                             <label htmlFor="password" >Confrim Password:</label>
-                            <input type={click ? "password" : "text"} placeholder='Confrim your password' className={`p-2 m-2 border border-gray-300 ${passwordError ? 'border-red-500' : password ? 'border-green-500' : 'border-gray-300'} w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
+                            <input type={click ? "password" : "text"} placeholder='Confrim your password' className={`p-2  border border-gray-300 ${passwordError ? 'border-red-500' : password ? 'border-green-500' : 'border-gray-300'} w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
                             {passwordError && (<div className='h-5 md:h-10 text-white text-lg border border-2 bg-red-600 rounded-md border-red-500'>{passwordError}</div>)}
                         </div>
 
-                        <button type='submit' className='p-2 m-2 border border-gray-300 rounded-lg hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black'>Create account</button>
+                        <button type='submit' className='p-2 bg-black text-gray-300  border border-gray-300 rounded-lg hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-black'>Create account</button>
 
                         <div className='flex justify-center'>
                             <p className='text-lg text-gray-300 '>Already have an account?</p>
