@@ -52,7 +52,7 @@ const Login = () => {
   return (
     <div className='w-full min-h-screen flex justify-center items-center'>
       <div className='border border-gray-300 p-4 rounded-md w-90 md:w-100'>
-        <h1 className='text-3xl text-center font-bold'>Login</h1>
+        <h1 className='text-4xl text-center font-bold'>Login</h1>
         <form onSubmit={handleSubmit} className='space-y-2 flex flex-col text-lg'>
           <label htmlFor='Email'>Email:</label>
           <input onChange={handleSetInputEmail} id='email' type='text' placeholder='Email' className='p-2  w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black' required />
