@@ -58,7 +58,7 @@ const Login = () => {
           <input onChange={handleSetInputEmail} id='email' type='text' placeholder='Email' className='p-2  w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black' required />
           <label htmlFor='Password'>Password:</label>
           <input onChange={handleSetInputPasswords} id='password' type={click ? "password" : "text"} placeholder='Input your password' className={`p-2  border border-gray-300 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
-          <FaEye onClick={handleSetClick} className='relative flex left-75 -top-10 active:border-1 active:border-white active:rounded-full' />
+          <FaEye onClick={handleSetClick} className='relative flex left-80 -top-10 active:border-1 active:border-white active:rounded-full' />
           <div className='flex gap-2'>
             <input type='checkbox'/>
             <p className='text-sm md:text-lg'>Remember Me</p>
