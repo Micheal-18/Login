@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
-import { FaEye } from 'react-icons/fa'
+import { FaEye, FaEyeSlash } from 'react-icons/fa'
 
 const CreatePass = () => {
 
@@ -109,9 +109,9 @@ const CreatePass = () => {
                         </div>
 
                         <div className='relative'>
-                            <label htmlFor="password" >Password:</label>
+                            <label htmlFor="password" >Password:</label>                        
                             <input onChange={handlePasswordChange} id='password' type={click ? "password" : "text"} placeholder='Input your password' className={`p-2  border border-gray-300 ${passwordError ? 'border-red-500' : password ? 'border-green-500' : 'border-gray-300'} w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-black`} required />
-                            <FaEye onClick={handleSetClick} className='relative flex left-75  md:left-130 -top-8 active:border-1 active:border-white active:rounded-full' />
+                            {click ? <FaEyeSlash onClick={handleSetClick} className='relative flex left-75  md:left-130 -top-8 active:border-1 active:border-white active:rounded-full' /> : <FaEye onClick={handleSetClick} className='relative flex left-75  md:left-130 -top-8 active:border-1 active:border-white active:rounded-full' />}
                         </div>
 
                         <div onChange={handlePasswordConfrimChange} className='relative'>
